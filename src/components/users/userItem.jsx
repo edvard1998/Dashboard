@@ -32,20 +32,20 @@ const UserItem = props => {
               align: 'center'
             },
             {
-                value: (
-                  <div className={tableStyle["table-calendar-quantity-cell"]}>
-                    <Text size="small" ellipsis>{props.user.calendarQuantity || '-'}</Text>
-                  </div>
-                ),
-                align: 'center'
+              value: (
+                <div className={tableStyle["table-calendar-quantity-cell"]}>
+                  <Text size="small" ellipsis>{props.user.calendarQuantity || '-'}</Text>
+                </div>
+              ),
+              align: 'center'
             },
             {
-                value: (
-                  <div className={tableStyle["table-events-quantity-cell"]}>
-                    <Text size="small" ellipsis>{props.user.eventsQuantity || '-'}</Text>
-                  </div>
-                ),
-                align: 'center'
+              value: (
+                <div className={tableStyle["table-events-quantity-cell"]}>
+                  <Text size="small" ellipsis>{props.user.eventsQuantity || '-'}</Text>
+                </div>
+              ),
+              align: 'center'
             },
             {
               value: (

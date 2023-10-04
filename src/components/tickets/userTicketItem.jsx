@@ -5,8 +5,7 @@ import userTicketStyle from "@/styles/user-tickest.module.css";
 const UserTicket = props => {
   if (props.ticket && props.index + 1) {
     return (
-      <Card verticalAlign="top" className={userTicketStyle["user-ticket"]}
-      > 
+      <Card verticalAlign="top" className={userTicketStyle["user-ticket"]}> 
         <Box 
           direction="vertical" 
           gap={"16px"} 
