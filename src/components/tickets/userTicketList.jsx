@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 import { selectTotalValues } from '@/redux/silces/calendarSlice';
 import { Box } from '@wix/design-system';
-import UserTicket from './userTicketItem'
+import UserTicketItem from './userTicketItem'
 
-const UserTickets = () => {
+const UserTicketList = () => {
   const tickets = useSelector(selectTotalValues);
 
   return (
@@ -15,7 +15,7 @@ const UserTickets = () => {
     >
       {
         tickets.map((ticket, index) =>  (
-          <UserTicket 
+          <UserTicketItem 
             key={index}
             index={index}
             ticket={ticket}
@@ -26,4 +26,4 @@ const UserTickets = () => {
   )
 }
 
-export default UserTickets;
+export default UserTicketList;

@@ -2,7 +2,7 @@ import { Card, Box, Heading, Text } from '@wix/design-system';
 import { ArrowDownSmall, ArrowUpSmall } from '@wix/wix-ui-icons-common';
 import userTicketStyle from "@/styles/user-tickest.module.css";
 
-const UserTicket = props => {
+const UserTicketItem = props => {
   if (props.ticket && props.index + 1) {
     return (
       <Card verticalAlign="top" className={userTicketStyle["user-ticket"]}> 
@@ -40,4 +40,4 @@ const UserTicket = props => {
   }
 }
 
-export default UserTicket;
+export default UserTicketItem;

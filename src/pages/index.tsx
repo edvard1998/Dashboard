@@ -5,10 +5,9 @@ import { WixDesignSystemProvider, Box } from '@wix/design-system';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchData } from '../redux/silces/calendarSlice';
-
-import InfiniteScrollTable from "@/components/users/userList";
+import UserList from "@/components/users/userList";
 import SplineChart from '../components/charts/splineChart/splineChart';
-import UserTickets from '../components/tickets/userTicketList';
+import UserTicketList from '../components/tickets/userTicketList';
 import Header from '../components/header/header';
 import "@wix/design-system/styles.global.css";
 
@@ -20,8 +19,8 @@ export default function Home() {
   
   useEffect(() => {
     dispatch(fetchData());
-  }, [])
-
+  }, []);
+  
   return (
     <>
       <Head>
@@ -41,9 +40,9 @@ export default function Home() {
           padding={'0 10px'}
         >
           <Header />
-          <UserTickets />
+          <UserTicketList />
           <SplineChart />
-          <InfiniteScrollTable />
+          <UserList />
         </Box>
       </WixDesignSystemProvider>
       </main>

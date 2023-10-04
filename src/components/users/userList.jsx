@@ -2,12 +2,11 @@ import { useState } from 'react';
 import { TableListHeader, Card, TableToolbar, Text } from '@wix/design-system';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUsersData, sort } from '@/redux/silces/calendarSlice';
-import UserData from './userItem';
+import UserItem from './userItem';
 import "@wix/design-system/styles.global.css";
 import tableStyle from "@/styles/table.module.css";
 
-const InfiniteScrollTable = () => {
-
+const UserList = () => {
   const usersData = useSelector(selectUsersData);
   const dispatch = useDispatch();
   const handleSort = () => { 
@@ -44,7 +43,7 @@ const InfiniteScrollTable = () => {
         />
         {
           usersData.map((user, index) =>
-            <UserData key={index} user={user} />
+            <UserItem key={index} user={user} />
           )
         }
       </div>
@@ -52,4 +51,4 @@ const InfiniteScrollTable = () => {
   );
 }
 
-export default InfiniteScrollTable;
+export default UserList;
